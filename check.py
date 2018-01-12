@@ -20,10 +20,14 @@ def test_proxy(proxy):
     }
 
     headers = {
-        'User-Agent': 'pokemongo/1 CFNetwork/758.5.3 Darwin/15.6.0'
+        'Accept': '*/*',
+        'User-Agent': 'pokemongo/0 CFNetwork/811.5.4 Darwin/16.7.0',
+        'Accept-Language': 'en-us',
+        'Accept-Encoding': 'gzip, deflate',
+        'X-Unity-Version': '2017.1.2f1'
     }
 
-    url = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize'
+    url = 'https://sso.pokemon.com/sso/login?service=https%3A%2F%2Fsso.pokemon.com%2Fsso%2Foauth2.0%2FcallbackAuthorize&locale=en_US'
 
     try:
         r = requests.get(url, proxies=proxies, timeout=1.0, headers=headers)
